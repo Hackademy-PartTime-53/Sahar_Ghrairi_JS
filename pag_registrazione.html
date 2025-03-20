@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione Azienda</title>
+    <link rel="stylesheet" href="pag_registrazione.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registrazione Aziendale</h1>
+        <p class="subtitle">Compila il modulo con i dettagli richiesti per registrare la tua attività.</p>
+
+        <form id="registrationForm">
+            <fieldset>
+                <legend>Dettagli Aziendali</legend>
+
+                <div class="input-group">
+                    <label for="companyName">Nome Azienda</label>
+                    <input type="text" id="companyName" name="companyName" placeholder="Inserisci il nome aziendale" required autocomplete="organization" aria-label="Nome azienda">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required autocomplete="email" aria-label="Indirizzo email">
+                </div>
+
+                <div class="input-group password-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Crea una password" required autocomplete="new-password" aria-label="Password">
+                    <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                </div>
+                <script>
+                    function togglePassword() {
+                        const passwordInput = document.getElementById("password");
+                        const togglePasswordSpan = document.querySelector(".toggle-password");
+
+                        if (passwordInput.type === "password") {
+                            passwordInput.type = "text";
+                            togglePasswordSpan.textContent = "👁️‍🗨️";
+                        } else {
+                            passwordInput.type = "password";
+                            togglePasswordSpan.textContent = "👁️"; // Change back to the hidden state icon
+                        }
+                    }
+
+                    //Add event listener instead of inline onclick
+                    document.querySelector(".toggle-password").addEventListener('click', togglePassword)
+                </script>
+                <div class="input-group">
+                    <label for="phone">Numero di telefono</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Es. +39 345 678 910" pattern="\+?\d{1,4}?\s?\d{6,12}" required autocomplete="tel" aria-label="Numero di telefono">
+                </div>
+
+                <div class="input-group">
+                    <label for="address">Indirizzo</label>
+                    <input type="text" id="address" name="address" placeholder="Inserisci l'indirizzo aziendale" required autocomplete="street-address" aria-label="Indirizzo">
+                </div>
+
+                <button type="submit">Registrati</button>
+                <p>Hai già un account? <a href="../login/login.php">Accedi qui</a></p>
+
+                <script>
+                    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+                        event.preventDefault(); // Previene il comportamento predefinito dell'invio del form
+
+                        // Simuliamo una registrazione avvenuta con successo
+                        setTimeout(() => {
+                            window.location.href = "conferma_registrazione.html"; // Reindirizza alla pagina di conferma
+                        }, 1000);
+                    });
+                </script>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
