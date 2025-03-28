@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*settaggio generale*/
+:root {
+    --my--colore--primario: rgb(22, 103, 147);
+    --my--colore--secondario: rgb(170, 101, 103);
+    --my--colore--terziario: rgba(221, 175, 184, 0.525);
+    --my--colore--appoggio: rgb(243, 151, 53);
+    --my--colore--testo-nero: rgb (30, 30, 30);
+    --my--colore--testo-bianco: rgb (255, 255, 255);
+    font-size: 16px;
+
+}
+
+
+/*impostazione font*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+}
+
+p,
+ul {
+    font-family: 'Lora', serif;
+}
+
+.my-navbar-bg {
+    background-color: var(--my--colore--primario);
+    color: var(--my--colore--testo-bianco);
+}
+
+.my-dim-logo {
+    font-size: 3rem;
+}
+
+.nav-item a {
+    font-weight: 1.3rem;
+    letter-spacing: 1.5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.my-sfondo-titolo {
+    background-color: var(--my--colore--terziario);
+    color: var(--my--colore--testo-nero);
+    padding: 2rem;
+    opacity: 3;
+}
+
+
+h1 {
+    font-size: 3rem;
+}
+
+.btn {
+    background-color: var(--my--colore--secondario);
+    color: var(--my--colore--testo-bianco);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.my-bg-home {
+    background-image: url(../immagini/image.png);
+    background-size: cover;
+    background-position: center center;
+    padding: 2rem;
+
+
+}
+
+h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+#nostri_numeri>p {
+    font-size: 1.5rem;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+
+}
+
+#nostri_numeri>p>span {
+    color: var(--my--colore--appoggio);
+    font-size: 3rem;
+}
+
+.my-imagine {
+    margin-top: 1rem;
+    padding: 2rem;
+}
